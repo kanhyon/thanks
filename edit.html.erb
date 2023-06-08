@@ -1,0 +1,12 @@
+<%= form_for @post do |f| %>
+    <div class="">感謝する人</div>
+    <%= f.text_field :sender %>
+    <div class="">感謝される人</div>
+    <%= f.text_field :receiver %>
+   <div class="">送るバッジ</div>
+    <%= f.select :badge, ['👍', '😆', '🍺', '💖', '☕️','😭'], {include_blank: 'バッジを選んでね'} %>
+    <div class="">メッセージ</div>
+    <%= f.text_area :message %>
+    <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', posts_path %>

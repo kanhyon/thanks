@@ -1,0 +1,74 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+.card{
+    display: flex;
+}
+
+.buttonlist{
+    display: grid;
+}
+.button{
+    background-color: orange;
+    text-decoration: none;
+    color: white;
+    padding: 6px;
+    margin: 1px 0;
+    width: 60px;
+    text-align: center;
+    border-radius: 8px;
+    display: block;
+    
+}
+div{
+    margin: 5px;
+}
+
+td{
+    height: 100px;
+}
+tr{
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+    margin: 20px 0;
+}
+table   {
+    border-collapse:collapse;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.new{
+    position: absolute;
+    right: 5vw;
+    margin-top: 20px;
+}
+.message{
+    font-size: larger;
+}
+.sender div{
+    text-align: center;
+}
+.receiver div{
+    text-align: center;
+}
+td:has(.message){
+    background-image: url(https://lohas.nicoseiga.jp/thumb/10881452i?1641789615);
+    text-align: center;
+    width:400px;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+}
+.badge p{
+    font-size: 40px;
+}
+.none{
+    visibility: hidden;
+}

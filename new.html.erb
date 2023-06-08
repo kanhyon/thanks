@@ -1,0 +1,15 @@
+<h1>感謝を伝える</h1>
+<%= form_for @post do |f| %>
+     <% i =rand(6) + 1 %>
+    <div class="">あなたの名前</div>
+    <%= f.text_field :sender %>
+    <div class="">感謝を伝えたい人</div>
+    <%= f.text_field :receiver %>
+    <div class="">送るバッジ</div>
+    <%= f.select :badge, ['👍', '😆', '🍺', '💖', '☕️','😭'], {include_blank: 'バッジを選んでね'} %>
+    <div class="">メッセージ</div>
+    <%= f.text_area :message %>
+    <%= f.number_field :point ,value:i,class:"none" %>
+    <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', posts_path %>

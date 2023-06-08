@@ -1,0 +1,61 @@
+
+<table class="teble">
+  <tbody>
+    <% @posts.each do |post| %>
+        <tr>
+                <td>
+                        <div class="receiver">
+                            <% if post.point == 1 %>
+                            <%= image_tag 'User1.png', class: 'img' %>
+                            <% elsif post.point == 2 %>
+                            <%= image_tag 'User2.png', class: 'img' %>
+                            <% elsif post.point == 3 %>
+                            <%= image_tag 'kuma.jpg', class: 'img' %>
+                            <% elsif post.point == 4 %>
+                            <%= image_tag 'neko.jpg', class: 'img' %>
+                            <% elsif post.point == 5 %>
+                            <%= image_tag 'inu.jpg', class: 'img' %>
+                            <% elsif post.point == 6 %>
+                            <%= image_tag 'usagi.jpg', class: 'img' %>
+                            <% end %>
+                            <div>感謝された人：<%= post.receiver %></div>
+                        </div>
+                </td>
+                
+                
+                <td>
+                        <div class="message"><p><%= post.message %></p></div>
+                </td>
+                <td>
+                        <div class="sender">
+                          <% if post.point == 6 %>
+                            <%= image_tag 'User1.png', class: 'img' %>
+                            <% elsif post.point == 5 %>
+                            <%= image_tag 'User2.png', class: 'img' %>
+                            <% elsif post.point == 4 %>
+                            <%= image_tag 'kuma.jpg', class: 'img' %>
+                            <% elsif post.point == 3 %>
+                            <%= image_tag 'neko.jpg', class: 'img' %>
+                            <% elsif post.point == 2 %>
+                            <%= image_tag 'inu.jpg', class: 'img' %>
+                            <% elsif post.point == 1 %>
+                            <%= image_tag 'usagi.jpg', class: 'img' %>
+                            <% end %>
+                            <div>感謝した人：<%= post.sender %></div>
+                        </div>
+                </td>
+                <td>
+                        <div class="badge"><p><%= post.badge %></p></div>
+                </td>
+                <td>    
+                        <%= link_to '編集', edit_post_path(post) ,class:"button"%> 
+                </td>
+                <td>
+                        <%= link_to '削除', post_path(post), method: :delete ,class:"button"%>
+                </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to '作成', new_post_path,class:"button new" %>
